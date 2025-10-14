@@ -1,0 +1,150 @@
+@import "../block/mixin";
+.works__wrapper {
+  width: 100%;
+}
+.works {
+  width: 1200px;
+  height: 666px;
+  margin: 320px auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  &__title {
+    font-weight: 900;
+    font-size: 24px;
+    line-height: 32px;
+    @include color(#83888f);
+  }
+
+  &__line {
+    width: 766px;
+  }
+
+  &__cards {
+    width: 100%;
+    height: 355px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .works__card {
+      width: 285px;
+      height: 355px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      &__num {
+        @include font__family("Fraunces");
+        font-style: normal;
+        font-weight: 900;
+        font-size: 72px;
+        line-height: 72px;
+        color: #fdd6ba;
+      }
+
+      &__title2 {
+        @include font__family("Fraunces");
+        font-weight: 900;
+        font-size: 32px;
+        line-height: 36px;
+        color: #333d4b;
+      }
+
+      &__subtitle {
+        width: 285px;
+        height: 130px;
+        @include font__family("Barlow");
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 26px;
+        color: #333d4b;
+      }
+    }
+  }
+
+  &__btn {
+    width: 217px;
+    height: 56px;
+    background: #0ba8a6;
+    border-radius: 6px;
+    border: none;
+    @include font__family("Fraunces");
+    font-weight: 900;
+    font-size: 18px;
+    line-height: 25px;
+    text-align: center;
+    color: #fefcf7;
+    transition: all 0.3s ease;
+
+    &:hover {
+      @include nav(#17f8f4);
+      transform: scale(1.2);
+      @include borders(2px solid #0e8784);
+      color: #0e8784;
+    }
+
+    &:active {
+      transform: scale(1.1) translateY(2px);
+      box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.3);
+      background: #098886;
+      @include borders(2px solid #0e8784);
+      color: #00fffb;
+    }
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .works {
+    margin-top: 1000px;
+    width: 100%;
+    height: auto;
+    align-items: center;
+    flex-direction: column;
+
+    &__line {
+      width: 100%;
+      max-width: 300px;
+      margin-bottom: 40px;
+    }
+
+    &__cards {
+      flex-direction: column;
+      gap: 40px;
+      align-items: center;
+      height: auto;
+    }
+
+    &__card {
+      width: 100%;
+      height: auto;
+      text-align: center;
+
+      &__subtitle {
+        width: 100%;
+        height: auto;
+        font-size: 14px;
+        line-height: 22px;
+      }
+
+      &__num {
+        font-size: 48px;
+        line-height: 48px;
+      }
+
+      &__title2 {
+        font-size: 24px;
+        line-height: 30px;
+        margin: 10px 0;
+      }
+    }
+
+    &__btn {
+      margin-top: 40px;
+      width: 100%;
+      max-width: 220px;
+    }
+  }
+}

@@ -1,0 +1,27 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+::selection {
+   background-color: #0895db;
+  color: #003366;
+}
+
+.wrapper {
+  width: 100%;
+}
+.container {
+  width: 1300px;
+  margin: 0 auto;
+  padding: 0 20px;
+}

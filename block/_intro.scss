@@ -1,0 +1,177 @@
+.intro {
+  background-color: #ffffff;
+  padding: 60px 20px;
+  position: relative;
+  margin-top: 70px;
+
+  &__container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+  }
+
+  &__left {
+    max-width: 540px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 24px;
+  }
+
+  &__title {
+    font-family: "Gilroy";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 50px;
+    line-height: 85%;
+    letter-spacing: -0.04em;
+    color: #142251;
+
+    span {
+      color: #989eb1;
+    }
+  }
+
+  &__subtitle {
+    font-family: "Gilroy";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 100%;
+    letter-spacing: -0.03em;
+    color: #989eb1;
+  }
+  &__bottom {
+    width: 100%;
+  }
+  &__chat {
+    width: 1200px;
+    margin: auto;
+  }
+
+  &__info {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 12px 20px;
+    width: 300px;
+    background-color: #2138870f;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+
+    &__title {
+      font-family: "Gilroy";
+      font-weight: 600;
+      font-size: 20px;
+      letter-spacing: -0.03em;
+      color: #213887;
+      transition: transform 0.3s ease;
+
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+
+    &__img {
+      width: 24px;
+      height: 24px;
+    }
+  }
+
+  &__scroll__arrow {
+    font-size: 24px;
+    color: #0f1a3b;
+    margin-top: 40px;
+    animation: bounce 2s infinite;
+  }
+
+  &__right {
+    flex-shrink: 0;
+
+    .intro__image {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+  }
+
+  &__chat {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: #F2F3F8;
+    width: 500px;
+
+    &__button {
+      background-color: transparent;
+      border: 1px solid #0f1a3b;
+      color: #0f1a3b;
+      padding: 8px 16px;
+      border-radius: 6px;
+      font-size: 14px;
+      font-family: "Gilroy";
+      font-style: normal;
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 100%;
+      letter-spacing: -0.03em;
+      text-transform: lowercase;
+      color: #142251;
+      flex: none;
+      order: 1;
+      flex-grow: 0;
+
+      border: none;
+    }
+
+    &__email {
+      font-family: "Gilroy";
+      font-style: normal;
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 100%;
+      letter-spacing: -0.03em;
+      text-decoration-line: underline;
+      text-transform: lowercase;
+      color: #213887;
+      flex: none;
+      order: 3;
+      flex-grow: 0;
+    }
+  }
+
+  @keyframes bounce {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-8px);
+    }
+  }
+
+  @media (max-width: 500px) {
+    &__container {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    &__right {
+      margin-top: 40px;
+    }
+
+    &__bottom {
+      position: static;
+      margin-top: 30px;
+    }
+
+    &__chat {
+      flex-direction: column;
+      gap: 6px;
+    }
+  }
+}
