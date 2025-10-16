@@ -102,7 +102,8 @@
     display: flex;
     align-items: center;
     gap: 12px;
-    background: #F2F3F8;
+    background: #f2f3f8;
+
     width: 500px;
 
     &__button {
@@ -140,6 +141,11 @@
       flex: none;
       order: 3;
       flex-grow: 0;
+
+      &:hover {
+        text-decoration: none;
+        color: #0f1a3b;
+      }
     }
   }
 
@@ -149,29 +155,108 @@
       transform: translateY(0);
     }
     50% {
-      transform: translateY(-8px);
+      transform: translateY(-13px);
     }
   }
 
-  @media (max-width: 500px) {
+  @media only screen and (max-width: 500px) {
+    .container {
+      width: 100%;
+    }
+    .intro {
+      width: 120%;
+      &__container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+
+      &__right {
+        margin-top: 40px;
+      }
+
+      &__bottom {
+        position: static;
+        margin-top: 30px;
+      }
+
+      &__chat {
+        flex-direction: column;
+        gap: 6px;
+        width: 100%;
+      }
+
+      &__info {
+        width: 100%;
+        justify-content: center;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .container {
+    width: 100%;
+  }
+  .intro {
+    padding: 40px 20px;
+    width: 100%;
+
     &__container {
       flex-direction: column;
       align-items: center;
       text-align: center;
+      gap: 30px;
     }
 
-    &__right {
-      margin-top: 40px;
+    &__left {
+      max-width: 100%;
+      align-items: center;
     }
 
-    &__bottom {
-      position: static;
-      margin-top: 30px;
+    &__title {
+      font-size: 38px;
+      line-height: 95%;
+    }
+
+    &__subtitle {
+      font-size: 20px;
+    }
+
+    &__info {
+      width: 100%;
+      justify-content: center;
     }
 
     &__chat {
       flex-direction: column;
-      gap: 6px;
+      gap: 8px;
+      width: 100%;
+      padding: 16px;
+      text-align: center;
+
+      &__button {
+        width: 100%;
+        font-size: 18px;
+      }
+
+      &__email {
+        font-size: 18px;
+      }
+    }
+
+    &__right {
+      margin-top: 30px;
+
+      .intro__image {
+        max-width: 100%;
+        height: auto;
+      }
+    }
+
+    &__bottom {
+      margin-top: 30px;
+      width: 100%;
     }
   }
 }

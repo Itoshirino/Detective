@@ -1,0 +1,82 @@
+.box {
+  width: 100%;
+  background: #ffff;
+  font-family: "Gilroy";
+  color: #2c3e50;
+  padding: 40px 20px;
+
+  &__box {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__title {
+    font-family: "Gilroy";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 94px;
+    line-height: 100%;
+
+    text-align: center;
+    letter-spacing: -0.04em;
+
+    color: #142251;
+
+    margin-bottom: 10px;
+  }
+
+  &__subtitle {
+    font-family: "Gilroy";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 34px;
+    line-height: 120%;
+    /* or 41px */
+    text-align: center;
+    letter-spacing: -0.03em;
+
+    /* #AFB4C4 */
+    color: #989eb1;
+
+    margin-bottom: 30px;
+  }
+
+  &__content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    gap: 20px;
+  }
+
+  &__img {
+    width: 1000px;
+    height: auto;
+    margin-top: 35px;
+  }
+
+  @media only screen and (max-width: 1024px) {
+    &__img{
+      width: 100%;
+    }
+  }
+
+  @media only screen and (max-width: 500px) {
+    &__content {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &__card {
+      width: 100%;
+      max-width: 300px;
+      height: auto;
+      padding: 15px;
+    }
+  }
+}
