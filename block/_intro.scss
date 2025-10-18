@@ -55,18 +55,25 @@
   &__info {
     display: flex;
     align-items: center;
+    text-align: center;
     gap: 16px;
-    padding: 12px 20px;
-    width: 300px;
-    background-color: #2138870f;
     border-radius: 10px;
     transition: all 0.3s ease;
+    border: none;
 
     &__title {
       font-family: "Gilroy";
+      display: flex;
+      align-items: center;
+      text-align: center;
+      gap: 16px;
+      padding: 12px 20px;
+      width: 300px;
+      background-color: #2138870f;
       font-weight: 600;
       font-size: 20px;
       letter-spacing: -0.03em;
+      border: none;
       color: #213887;
       transition: transform 0.3s ease;
 

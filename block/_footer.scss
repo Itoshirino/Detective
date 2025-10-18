@@ -5,7 +5,10 @@ $color-white: #fff;
 $color-border: #dce3f0;
 $color-muted: #a3a8b8;
 
-.contacts__wrapper .contacts {
+.contacts__wrapper {
+  width: 100%;
+}
+.contacts {
   width: 1200px;
   margin: 2% auto;
   padding: 50px;
@@ -14,7 +17,7 @@ $color-muted: #a3a8b8;
   gap: 40px;
 
   &__header {
-    display: flex;
+    display: none;
     justify-content: space-between;
     align-items: center;
     width: 90%;
@@ -65,7 +68,6 @@ $color-muted: #a3a8b8;
     width: 70%;
     height: 70%;
     fill: #7a7a7a;
-    pointer-events: none;
   }
 
   &__form {
@@ -84,8 +86,9 @@ $color-muted: #a3a8b8;
 
   &__label {
     font-family: "Gilroy";
+    font-style: normal;
     font-weight: 600;
-    font-size: 14px;
+    line-height: 100%;
     color: #142251;
   }
 
@@ -153,48 +156,49 @@ $color-muted: #a3a8b8;
   }
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 500px) {
   .contacts {
-    width: 90%;
+    max-width: 100% !important;
     padding: 20px;
     gap: 16px;
+  }
 
-    &__header {
-      flex-direction: column;
-      gap: 12px;
-      width: 100%;
-    }
+  &__header {
+    flex-direction: column;
+    display: none;
+    gap: 12px;
+    width: 90%;
+  }
 
-    &__title {
-      font-size: 24px;
-      text-align: center;
-    }
+  &__title {
+    font-size: 24px;
+    text-align: center;
+  }
 
-    &__form {
-      width: 100%;
-      flex-direction: column;
-      gap: 16px;
-    }
+  &__form {
+    width: 100%;
+    flex-direction: column;
+    gap: 16px;
+  }
 
-    &__card {
-      width: 100%;
-    }
+  &__card {
+    width: 100%;
+  }
 
-    &__input {
-      height: 50px;
-      font-size: 18px;
-    }
+  &__input {
+    height: 50px;
+    font-size: 18px;
+  }
 
-    &__consent {
-      width: 100%;
-      font-size: 14px;
-    }
+  &__consent {
+    width: 100%;
+    font-size: 14px;
+  }
 
-    &__btn-submit {
-      max-width: 100%;
-      height: 56px;
-      font-size: 18px;
-    }
+  &__btn-submit {
+    max-width: 100%;
+    height: 56px;
+    font-size: 18px;
   }
 }
 
@@ -212,14 +216,12 @@ $color-muted: #a3a8b8;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap;
   gap: 16px;
 
   &__left {
     display: flex;
     gap: 24px;
     align-items: center;
-    flex-wrap: wrap;
     border: 1px solid $color-border;
     border-radius: 50px;
     padding: 8px 24px;
@@ -272,10 +274,10 @@ $color-muted: #a3a8b8;
     display: flex;
     align-items: center;
     gap: 8px;
-    transition: background-color 0.3s ease;
+    transition: all 0.3s ease;
 
     &:hover {
-      background: darken($color-primary, 10%);
+      background: #142251;
     }
 
     svg {
@@ -294,8 +296,10 @@ $color-muted: #a3a8b8;
     align-items: center;
 
     a {
+      color: #8a8a8a;
+      font-weight: 500;
       text-decoration: underline;
-      font-weight: 700;
+      font-family: "Gilroy";
 
       &:hover {
         color: $color-primary;
@@ -304,12 +308,7 @@ $color-muted: #a3a8b8;
   }
 }
 
-@media only screen and (max-width: 1200px) {
-  .container__content {
-    width: 100%;
-    padding: 20px;
-  }
-
+@media only screen and (max-width: 500px) {
   .business__cards {
     width: 100%;
     gap: 24px;
@@ -332,10 +331,13 @@ $color-muted: #a3a8b8;
     width: 100%;
     text-align: center;
   }
-
+  .footer__wrapper {
+    width: 100%;
+  }
   .footer {
     flex-direction: column;
     gap: 16px;
+    width: 100%;
 
     &__left {
       justify-content: center;
